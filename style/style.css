@@ -1,0 +1,24 @@
+.search-bar {
+	margin: 20px;
+	text-align:center;
+}
+
+.search-bar select{
+	width:100%;
+}
+
+.poke-timer {
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #020202;
+    padding: 1px;
+}
+
+.pokemon{
+    cursor: pointer;
+}
