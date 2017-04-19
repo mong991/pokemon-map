@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  devtool: 'cheap-source-map',
+  devtool: 'source-map',
   entry: [
     './src/index.js'
   ],
