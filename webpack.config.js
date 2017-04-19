@@ -1,16 +1,15 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   devtool: 'eval-source-map',
   entry: [
-	  'webpack-dev-server/client',//资源服务器地址
-    'webpack/hot/only-dev-server',
     './src/index.js'
   ],
   output: {
-    path: path.join(__dirname, 'build/dist'),
+    path: path.join(__dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -49,6 +48,12 @@ module.exports = {
     }),
     new ExtractTextPlugin({ 
       filename: 'styles.css' 
-    })
+    }),
+    new CopyWebpackPlugin([
+      { 
+        from: 'image/pokemon', 
+        to: path.join(__dirname, 'dist/image/pokemon')
+      }
+    ])
   ]
 };

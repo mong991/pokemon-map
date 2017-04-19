@@ -7,7 +7,9 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js  --hot --progress --inline ",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "clean": "rimraf dist",
+    "build": "npm run clean &&　webpack --progress -p"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +20,7 @@
     "babel-preset-react": "^6.1.18",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "html-webpack-plugin": "^2.28.0",
@@ -26,6 +29,7 @@
     "mocha": "^2.4.5",
     "path": "^0.12.7",
     "react-addons-test-utils": "^0.14.7",
+    "rimraf": "^2.6.1",
     "style-loader": "^0.16.1",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.4.2"

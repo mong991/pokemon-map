@@ -127,7 +127,7 @@ class PkMap extends Component {
                     key: `pokemon_${index}`,
                     mapPaneName: OverlayView.OVERLAY_MOUSE_TARGET,
                     getPixelPositionOffset: this.getPixelPositionOffset,
-                    imgUrl: `../../image/pokemon/${marker.pokemonId}.jpg`
+                    imgUrl: `/image/pokemon/${marker.pokemonId}.jpg`
                 }
                 
                 const timerState = {
@@ -141,7 +141,7 @@ class PkMap extends Component {
                 };
 
 
-                let imgUrl = `../../image/pokemon/${marker.pokemonId}.jpg`;
+                let imgUrl = `/image/pokemon/${marker.pokemonId}.jpg`;
                 return (
                     <OverlayView {...timerState} >
                         <div className="pokemon" onClick={this.handlePokemonClick.bind(this, pokemonState) } >
